@@ -1,0 +1,38 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+}
+
+table{
+    table-layout: fixed;
+    width: 70%;
+    border-collapse: collapse;
+    border: 3px solid rgb(74, 175, 225);
+}
+
+thead th:nth-child(1){
+    width: 50%;
+}
+
+tbody td{
+    width: 50%;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+th, td{
+    padding: 10px;
+}
+
+/*tbody tr:nth-child(odd) {
+    background-color: #ff33cc;
+  }
+
+  
+tbody tr:nth-child(even) {
+    background-color: #e495e4;
+  }
+
+  tbody td:nth-child(even) {
+    background-color: #e495e4;
+  }*/

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NomiCol</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <main>
+            <div>
+                <ul>
+                    <li>
+                     Calculemos
+                    </li>
+                    <li>
+                        ¿Dudas?
+                    </li>
+                </ul>
+            </div>
+        </main>
+    </header>
+    <section>
+        <h1>Calcúlemos tu nómina <h2 id="nombrePersona"></h2> </h1>
+        <h3>Selecciona el año a consultar</h3>
+        <select  id="opcionesAnios">
+            <option value="0">Elegir Año</option>      
+            <option value="año2022">Año 2022</option>
+            <option value="año2021">Año 2021</option>
+            <option value="año2020">Año 2020</option>
+            <option value="año2019">Año 2019</option>
+        </select>
+        <table >
+            <caption> Montos de Salario mínimo y horas extras de acuerdo al año seleccionado</caption>
+            <thead>
+                <th>Salario y Horas</th>
+                <th>Montos</th>
+            </thead>
+            <tbody>
+                <tr >
+                    <th>
+                       Salario mínimo
+                    </th>
+                    <td id="anioElegido" class="td2">
+                       
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Hora extra diurna
+                    </th>
+                    <td id="horaExtraDiurna" class="td2">
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Hora extra nocturna
+                    </th>
+                    <td id="horaExtraNocturna" class="td2">
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Hora extra dominical/festivo diurna
+                    </th>
+                    <td id="extraDominical" class="td2">
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Hora extra dominical/festivo nocturna
+                    </th>
+                    <td id="extraDominicalNocturna"class="td2" >
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Subsidio de transporte mensual
+                    </th>
+                    <td id="auxilioTransporte"class="td2" >
+                        
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <button type="button" onclick="calcularValoresNomina()">Motrar Valores</button>
+    </section>
+    <section>
+        <table >
+            <caption>Montos por ingresos extras</caption>
+            <tr >
+                <td id="ingresosExtras">
+                   Viaticos
+                </td>
+                <td class="cantidadHoras">
+                    <input type="text">
+                </td>
+                <td  id="mostrarMontoHras">
+                    <h3>Este es tu monto por viáticos</h3>
+                </td>
+            </tr>
+            <tr>
+                <td id="ingresosExtras">
+                    Cantidad de horas extras diurnas trabajadas
+                </td>
+                <td class="cantidadHoras">
+                    <input type="text">
+                </td>
+                <td  id="mostrarMontoHras">
+                    <h3>Este es tu monto por viáticos</h3>
+                </td>
+            </tr>
+            <tr>
+                <td id="ingresosExtras">
+                    Cantidad de horas extras nocturnas trabajadas
+                </td>
+                <td class="cantidadHoras">
+                    <input type="text">
+                </td>
+                <td  id="mostrarMontoHras">
+                    <h3>Este es tu monto por viáticos</h3>
+                </td>
+            </tr>
+            <tr>
+                <td id="ingresosExtras">
+                    Cantidad de horas extras dominical/festivo diurna trabajadas
+                </td>
+                <td class="cantidadHoras">
+                    <input type="text">
+                </td>
+                <td  id="mostrarMontoHras">
+                    <h3>Este es tu monto por viáticos</h3>
+                </td>
+            </tr>
+            <tr>
+                <td id="ingresosExtras">
+                    Cantidad de horas extras dominical/festivo nocturna trabajadas
+                </td>
+                <td class="cantidadHoras">
+                    <input type="text">
+                </td>
+                <td  id="mostrarMontoHras">
+                    <h3>Este es tu monto por viáticos</h3>
+                </td>
+            </tr>
+            <tr>
+                <td id="ingresosExtras">
+                    Otros ingresos salariales mensuales
+                </td>
+                <td class="cantidadHoras">
+                    <input type="text">
+                </td>
+                <td  id="mostrarMontoHras">
+                    <h3>Este es tu monto por viáticos</h3>
+                </td>
+            </tr>
+        </table>
+        <button type="button" onclick="calcularValoresExtras()">Motrar Valores Extras</button>
+    </section>
+    <table>
+        <caption>Montos por prestaciones sociales</caption>
+        <thead>
+            <th>Salario y Horas</th>
+            <th>Montos</th>
+        </thead>
+        <tr >
+            <th>
+               Prime de Servicios
+            </th>
+            <td id="anioElegido" class="td2">
+               
+            </td>
+        </tr>
+        <tr >
+            <th>
+               Cesantías
+            </th>
+            <td id="anioElegido" class="td2">
+               
+            </td>
+        </tr>
+        <tr >
+            <th>
+               Intereses sobre cesantías
+            </th>
+            <td id="anioElegido" class="td2">
+               
+            </td>
+        </tr>
+    </table>
+    <table>
+        <caption>Montos por seguridad social</caption>
+        <thead>
+            <th>Salario y Horas</th>
+            <th>Montos</th>
+        </thead>
+    </table>
+    <script src="./main.js"></script>
+</body>
+</html>
