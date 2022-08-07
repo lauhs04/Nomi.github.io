@@ -71,13 +71,39 @@ function calcularPrestacionesSociales()
 let diasTrabajados = document.getElementById("diasTrabajados").value;
 let salarioMensual = document.getElementById("salarioMensual").value;
 let diasAnio = 360;
+let intCes = 0.01;
+let diasVac = 720;
 
 let primaServicios = (salario,dias,diasAnio) => {
     return (salario * dias)/diasAnio;
 }
 
+let cesantias = (salario,dias,diasAnio) => {
+    return (salario * dias)/diasAnio;
+}
+
+let vacaciones = (salario,dias,diasAnio) => {
+    return (salario / diasAnio)*dias;
+}
+
+let vacacion = vacaciones(salarioMensual, diasTrabajados,diasVac);
+document.getElementById("vacaciones").innerText= vacacion.toFixed(2);
+
+let cesantia = cesantias(salarioMensual, diasTrabajados,diasAnio);
+document.getElementById("cesantia").innerText= cesantia.toFixed(2);
+
+let intCesantias = (cesantias, interes) => {
+    return (cesantias*interes);
+}
+
+let interes = intCesantias(cesantia,intCes);
+document.getElementById("intCesantia").innerText= interes.toFixed(2);
+
+
 let prima = primaServicios(salarioMensual, diasTrabajados,diasAnio);
 document.getElementById("prima").innerText= prima.toFixed(2);
+
+
 }
 
 function calcularSeguridadSocial(){

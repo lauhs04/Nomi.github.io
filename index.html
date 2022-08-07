@@ -26,7 +26,7 @@
         </main>
     </header>
     <section>
-        <h1>Calcúlemos tu nómina <h2 id="nombrePersona"></h2> </h1>
+        <!--<h1>Calcúlemos tu nómina <h2 id="nombrePersona"></h2> </h1>
         <h3>Selecciona el año a consultar</h3>
         <select  id="opcionesAnios">
             <option value="0">Elegir Año</option>      
@@ -165,18 +165,34 @@
             </tr>
         </table>
         <button type="button" onclick="calcularValoresExtras()">Motrar Valores Extras</button>
-    </section>
+    </section>-->
     <table>
         <caption>Montos por prestaciones sociales</caption>
         <thead>
-            <th>Salario y Horas</th>
+            <th>Prestaciones sociales</th>
             <th>Montos</th>
         </thead>
         <tr >
             <th>
-               Prime de Servicios
+               Digite su salario
             </th>
             <td id="anioElegido" class="td2">
+               <input type="number" id="salarioMensual">
+            </td>
+        </tr>
+        <tr >
+            <th>
+               Días laborados
+            </th>
+            <td id="anioElegido" class="td2">
+               <input type="number" id="diasTrabajados">
+            </td>
+        </tr>
+        <tr >
+            <th>
+               Prima de Servicios
+            </th>
+            <td id="prima" class="td2">
                
             </td>
         </tr>
@@ -184,7 +200,7 @@
             <th>
                Cesantías
             </th>
-            <td id="anioElegido" class="td2">
+            <td id="cesantia" class="td2">
                
             </td>
         </tr>
@@ -192,18 +208,21 @@
             <th>
                Intereses sobre cesantías
             </th>
-            <td id="anioElegido" class="td2">
+            <td id="intCesantia" class="td2">
+               
+            </td>
+        </tr>
+        <tr >
+            <th>
+               Vacaciones
+            </th>
+            <td id="vacaciones" class="td2">
                
             </td>
         </tr>
     </table>
-    <table>
-        <caption>Montos por seguridad social</caption>
-        <thead>
-            <th>Salario y Horas</th>
-            <th>Montos</th>
-        </thead>
-    </table>
+    <button onclick="calcularPrestacionesSociales()">Calcular Prestaciones</button>
+    
     <script src="./main.js"></script>
 </body>
 </html>
